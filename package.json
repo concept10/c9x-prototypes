@@ -1,0 +1,12 @@
+{
+    "name": "c9x-friends",
+    "description": "using node-red as gateway broker",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
