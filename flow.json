@@ -1,1 +1,370 @@
-[]
+[
+    {
+        "id": "6d3223f8.705524",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e9bd3a91.a8f7c",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2122326e.513246",
+        "type": "inject",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "31ab6d91.604d72"
+            ]
+        ]
+    },
+    {
+        "id": "31ab6d91.604d72",
+        "type": "debug",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "36fb4c54.384434",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "mytopic",
+        "payload": "{\"hello\":\"world\"}",
+        "payloadType": "json",
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "96201f4b.f0f91"
+            ]
+        ]
+    },
+    {
+        "id": "b1987961.c4d8e8",
+        "type": "debug",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 810,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ea29a521.2cb4c8",
+        "type": "zeromq in",
+        "z": "e9bd3a91.a8f7c",
+        "name": "All topics",
+        "topic": "",
+        "fields": "topic,payload",
+        "server": "tcp://127.0.0.1:5555",
+        "output": "json",
+        "isserver": false,
+        "intype": "sub",
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "b1987961.c4d8e8"
+            ]
+        ]
+    },
+    {
+        "id": "96201f4b.f0f91",
+        "type": "zeromq out",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "topic": "",
+        "fields": "topic,payload",
+        "server": "tcp://*:5555",
+        "isserver": true,
+        "intype": "pub",
+        "x": 800,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "4bc91640.65c4f8",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "bool",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "96201f4b.f0f91"
+            ]
+        ]
+    },
+    {
+        "id": "68ea1fa4.74878",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "wulfkit",
+        "payload": "woof",
+        "payloadType": "str",
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "96201f4b.f0f91"
+            ]
+        ]
+    },
+    {
+        "id": "622fcd8a.1bfc04",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "num",
+        "payload": "999",
+        "payloadType": "num",
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "96201f4b.f0f91"
+            ]
+        ]
+    },
+    {
+        "id": "b1c97e2b.cf845",
+        "type": "debug",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 810,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2cefd6b.8b87f2a",
+        "type": "zeromq in",
+        "z": "e9bd3a91.a8f7c",
+        "name": "Topics starting with \"my\"...",
+        "topic": "my",
+        "fields": "topic,payload",
+        "server": "tcp://127.0.0.1:5555",
+        "output": "json",
+        "isserver": false,
+        "intype": "sub",
+        "x": 530,
+        "y": 560,
+        "wires": [
+            [
+                "b1c97e2b.cf845"
+            ]
+        ]
+    },
+    {
+        "id": "b93edb1d.cdd288",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "myother",
+        "payload": "{\"goodbye\":\"everyone\"}",
+        "payloadType": "json",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "96201f4b.f0f91"
+            ]
+        ]
+    },
+    {
+        "id": "646a8f9d.beebe",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "mybuffer",
+        "payload": "",
+        "payloadType": "str",
+        "x": 460,
+        "y": 440,
+        "wires": [
+            [
+                "66c3fe79.7a99f"
+            ]
+        ]
+    },
+    {
+        "id": "66c3fe79.7a99f",
+        "type": "function",
+        "z": "e9bd3a91.a8f7c",
+        "name": "make buffer",
+        "func": "msg.payload = new Buffer.from([\"0x48\",\"0x45\",\"0x4C\",\"0x4C\",\"0x4F\"]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 630,
+        "y": 440,
+        "wires": [
+            [
+                "96201f4b.f0f91"
+            ]
+        ]
+    },
+    {
+        "id": "6b7901bc.8a1c3",
+        "type": "inject",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1150,
+        "y": 300,
+        "wires": [
+            [
+                "76294a30.178044"
+            ]
+        ]
+    },
+    {
+        "id": "23cf851d.0d7c2a",
+        "type": "zeromq out",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "topic": "",
+        "fields": "payload",
+        "server": "tcp://*:4444",
+        "isserver": true,
+        "intype": "push",
+        "x": 1440,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4ba6aced.b853a4",
+        "type": "zeromq in",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "topic": "",
+        "fields": "payload",
+        "server": "tcp://127.0.0.1:4444",
+        "output": "json",
+        "isserver": false,
+        "intype": "pull",
+        "x": 1170,
+        "y": 420,
+        "wires": [
+            [
+                "c138fcb6.4e343"
+            ]
+        ]
+    },
+    {
+        "id": "c138fcb6.4e343",
+        "type": "debug",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 1450,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "76294a30.178044",
+        "type": "template",
+        "z": "e9bd3a91.a8f7c",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "outlaw-payload: {{payload}} !",
+        "output": "str",
+        "x": 1300,
+        "y": 340,
+        "wires": [
+            [
+                "23cf851d.0d7c2a"
+            ]
+        ]
+    }
+]
