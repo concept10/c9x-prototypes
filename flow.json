@@ -14,6 +14,121 @@
         "info": ""
     },
     {
+        "id": "b34078e6.e60df8",
+        "type": "ui_tab",
+        "z": "6d3223f8.705524",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
+        "id": "cd81d08b.eebb3",
+        "type": "ui_group",
+        "z": "6d3223f8.705524",
+        "name": "Default",
+        "tab": "b34078e6.e60df8",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "136789e3.a6cd76",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#7b219f",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#7b219f",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#7b219f",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#a837d5",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#7b219f",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
         "id": "2122326e.513246",
         "type": "inject",
         "z": "6d3223f8.705524",
@@ -27,18 +142,19 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "5",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 370,
+        "x": 380,
         "y": 360,
         "wires": [
             [
-                "31ab6d91.604d72"
+                "79c2ac56.4aded4",
+                "af43ecd2.052538"
             ]
         ]
     },
@@ -47,15 +163,15 @@
         "type": "debug",
         "z": "6d3223f8.705524",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 360,
+        "x": 750,
+        "y": 380,
         "wires": []
     },
     {
@@ -63,9 +179,19 @@
         "type": "inject",
         "z": "e9bd3a91.a8f7c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
+        "onceDelay": "",
         "topic": "mytopic",
         "payload": "{\"hello\":\"world\"}",
         "payloadType": "json",
@@ -86,7 +212,7 @@
         "console": "false",
         "complete": "true",
         "x": 810,
-        "y": 500,
+        "y": 480,
         "wires": []
     },
     {
@@ -100,8 +226,8 @@
         "output": "json",
         "isserver": false,
         "intype": "sub",
-        "x": 460,
-        "y": 500,
+        "x": 440,
+        "y": 480,
         "wires": [
             [
                 "b1987961.c4d8e8"
@@ -127,9 +253,19 @@
         "type": "inject",
         "z": "e9bd3a91.a8f7c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
+        "onceDelay": "",
         "topic": "bool",
         "payload": "true",
         "payloadType": "bool",
@@ -175,9 +311,19 @@
         "type": "inject",
         "z": "e9bd3a91.a8f7c",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
+        "onceDelay": "",
         "topic": "num",
         "payload": "999",
         "payloadType": "num",
@@ -212,30 +358,11 @@
         "output": "json",
         "isserver": false,
         "intype": "sub",
-        "x": 530,
-        "y": 560,
+        "x": 490,
+        "y": 540,
         "wires": [
             [
                 "b1c97e2b.cf845"
-            ]
-        ]
-    },
-    {
-        "id": "b93edb1d.cdd288",
-        "type": "inject",
-        "z": "e9bd3a91.a8f7c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "myother",
-        "payload": "{\"goodbye\":\"everyone\"}",
-        "payloadType": "json",
-        "x": 530,
-        "y": 400,
-        "wires": [
-            [
-                "96201f4b.f0f91"
             ]
         ]
     },
@@ -295,7 +422,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1150,
+        "x": 1090,
         "y": 300,
         "wires": [
             [
@@ -314,7 +441,7 @@
         "isserver": true,
         "intype": "push",
         "x": 1440,
-        "y": 360,
+        "y": 300,
         "wires": []
     },
     {
@@ -328,8 +455,8 @@
         "output": "json",
         "isserver": false,
         "intype": "pull",
-        "x": 1170,
-        "y": 420,
+        "x": 1110,
+        "y": 360,
         "wires": [
             [
                 "c138fcb6.4e343"
@@ -344,8 +471,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 1450,
-        "y": 420,
+        "x": 1430,
+        "y": 360,
         "wires": []
     },
     {
@@ -360,10 +487,228 @@
         "template": "outlaw-payload: {{payload}} !",
         "output": "str",
         "x": 1300,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "23cf851d.0d7c2a"
+            ]
+        ]
+    },
+    {
+        "id": "9b2a29cc.3c53a8",
+        "type": "worldmap",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSM",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "panit": "true",
+        "hiderightclick": "false",
+        "coords": "none",
+        "path": "",
+        "x": 1530,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1714967f.e691ea",
+        "type": "inject",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 890,
+        "y": 580,
+        "wires": [
+            [
+                "1b24ad2f.198453"
+            ]
+        ]
+    },
+    {
+        "id": "1b24ad2f.198453",
+        "type": "function",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "func": "// create random position\nvar lat = 51 + Math.random() * 0.2;\nvar lon = -1.45 + Math.random() * 0.2;\nmsg.payload={\n    lat:lat, \n    lon:lon, \n    name:\"Mike\", \n    icon:\"male\", \n    color:\"#001\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1040,
+        "y": 580,
+        "wires": [
+            [
+                "de5c4044.d4e0f",
+                "94a992ae.b4c2e"
+            ]
+        ]
+    },
+    {
+        "id": "5af27cae.299144",
+        "type": "inject",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 880,
+        "y": 700,
+        "wires": [
+            [
+                "f1be23c1.dd096"
+            ]
+        ]
+    },
+    {
+        "id": "f1be23c1.dd096",
+        "type": "template",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<iframe src=\"../worldmap\" height=300px ></iframe>",
+        "x": 1040,
+        "y": 700,
+        "wires": [
+            [
+                "4bab3415.afdf9c"
+            ]
+        ]
+    },
+    {
+        "id": "223f301c.54ea9",
+        "type": "comment",
+        "z": "6d3223f8.705524",
+        "name": "How to embed Map in Dashboard",
+        "info": "This example shows how to embed the Worldmap \ninto a template node within the `node-red-dashboard`\n\nThe first flow creates a dashboard button that \ngenerates a randon position, with the required \nicon, and passes that to the worldmap. The\nmap is configured to automatically pan to the\nposition of any point that arrives.\n\nThe second flow initialise the dashboard template\nwith the initial map and sets it to a more square shape\nby adjusting the height.",
+        "x": 950,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "de5c4044.d4e0f",
+        "type": "worldmap-tracks",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "depth": "5",
+        "layer": "combined",
+        "x": 1230,
+        "y": 580,
+        "wires": [
+            [
+                "9b2a29cc.3c53a8"
+            ]
+        ]
+    },
+    {
+        "id": "4bab3415.afdf9c",
+        "type": "ui_template",
+        "z": "6d3223f8.705524",
+        "group": "cd81d08b.eebb3",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "format": "<div ng-bind-html=\"msg.payload | trusted\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1250,
+        "y": 700,
+        "wires": [
+            [
+                "9b2a29cc.3c53a8"
+            ]
+        ]
+    },
+    {
+        "id": "94a992ae.b4c2e",
+        "type": "flightradar24",
+        "z": "6d3223f8.705524",
+        "lat": "61",
+        "latType": "num",
+        "lon": "-1.45",
+        "lonType": "num",
+        "name": "flightradar node",
+        "x": 1260,
+        "y": 640,
+        "wires": [
+            [
+                "9b2a29cc.3c53a8"
+            ]
+        ]
+    },
+    {
+        "id": "79c2ac56.4aded4",
+        "type": "flightradar24",
+        "z": "6d3223f8.705524",
+        "lat": "61",
+        "latType": "num",
+        "lon": "-1.45",
+        "lonType": "num",
+        "name": "flightradar node",
+        "x": 540,
+        "y": 380,
+        "wires": [
+            [
+                "31ab6d91.604d72"
+            ]
+        ]
+    },
+    {
+        "id": "d2d0685.7418798",
+        "type": "debug",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "af43ecd2.052538",
+        "type": "rx observer",
+        "z": "6d3223f8.705524",
+        "name": "",
+        "x": 250,
+        "y": 660,
+        "wires": [
+            [
+                "d2d0685.7418798"
+            ],
+            [
+                "d2d0685.7418798"
             ]
         ]
     }
