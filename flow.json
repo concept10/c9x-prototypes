@@ -3,13 +3,34 @@
         "id": "6d3223f8.705524",
         "type": "tab",
         "label": "Flow 1",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "e9bd3a91.a8f7c",
         "type": "tab",
         "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a4330611.11d488",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b70590d4.014528",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3ad4440b.02f8dc",
+        "type": "tab",
+        "label": "Flow 5",
         "disabled": false,
         "info": ""
     },
@@ -25,10 +46,11 @@
         "type": "ui_group",
         "z": "6d3223f8.705524",
         "name": "Default",
-        "tab": "b34078e6.e60df8",
+        "tab": "1c373b05.a90fa5",
         "order": 1,
         "disp": true,
-        "width": "6"
+        "width": "11",
+        "collapse": false
     },
     {
         "id": "136789e3.a6cd76",
@@ -129,6 +151,41 @@
         }
     },
     {
+        "id": "a927b038.cc144",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "552bcd8c.71a284",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "e65b306e.d34778",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "b34078e6.e60df8",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "552bcd8c.71a284",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1c373b05.a90fa5",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "2122326e.513246",
         "type": "inject",
         "z": "6d3223f8.705524",
@@ -149,8 +206,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 380,
-        "y": 360,
+        "x": 150,
+        "y": 120,
         "wires": [
             [
                 "79c2ac56.4aded4",
@@ -163,15 +220,15 @@
         "type": "debug",
         "z": "6d3223f8.705524",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 750,
-        "y": 380,
+        "x": 650,
+        "y": 220,
         "wires": []
     },
     {
@@ -208,7 +265,7 @@
         "type": "debug",
         "z": "e9bd3a91.a8f7c",
         "name": "",
-        "active": true,
+        "active": false,
         "console": "false",
         "complete": "true",
         "x": 810,
@@ -340,7 +397,7 @@
         "type": "debug",
         "z": "e9bd3a91.a8f7c",
         "name": "",
-        "active": true,
+        "active": false,
         "console": "false",
         "complete": "true",
         "x": 810,
@@ -393,6 +450,8 @@
         "func": "msg.payload = new Buffer.from([\"0x48\",\"0x45\",\"0x4C\",\"0x4C\",\"0x4F\"]);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 630,
         "y": 440,
         "wires": [
@@ -422,8 +481,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1090,
-        "y": 300,
+        "x": 710,
+        "y": 120,
         "wires": [
             [
                 "76294a30.178044"
@@ -440,8 +499,8 @@
         "server": "tcp://*:4444",
         "isserver": true,
         "intype": "push",
-        "x": 1440,
-        "y": 300,
+        "x": 1060,
+        "y": 120,
         "wires": []
     },
     {
@@ -455,8 +514,8 @@
         "output": "json",
         "isserver": false,
         "intype": "pull",
-        "x": 1110,
-        "y": 360,
+        "x": 730,
+        "y": 180,
         "wires": [
             [
                 "c138fcb6.4e343"
@@ -471,8 +530,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 1430,
-        "y": 360,
+        "x": 1050,
+        "y": 180,
         "wires": []
     },
     {
@@ -486,8 +545,8 @@
         "syntax": "mustache",
         "template": "outlaw-payload: {{payload}} !",
         "output": "str",
-        "x": 1300,
-        "y": 300,
+        "x": 920,
+        "y": 120,
         "wires": [
             [
                 "23cf851d.0d7c2a"
@@ -499,19 +558,21 @@
         "type": "worldmap",
         "z": "6d3223f8.705524",
         "name": "",
-        "lat": "",
-        "lon": "",
+        "lat": "1",
+        "lon": "-1.45",
         "zoom": "",
-        "layer": "OSM",
+        "layer": "Hike Bike",
         "cluster": "",
         "maxage": "",
-        "usermenu": "hide",
+        "usermenu": "show",
+        "layers": "show",
         "panit": "true",
         "hiderightclick": "false",
         "coords": "none",
+        "allowFileDrop": "true",
         "path": "",
-        "x": 1530,
-        "y": 600,
+        "x": 750,
+        "y": 400,
         "wires": []
     },
     {
@@ -535,8 +596,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 890,
-        "y": 580,
+        "x": 110,
+        "y": 380,
         "wires": [
             [
                 "1b24ad2f.198453"
@@ -553,12 +614,11 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1040,
-        "y": 580,
+        "x": 260,
+        "y": 380,
         "wires": [
             [
-                "de5c4044.d4e0f",
-                "94a992ae.b4c2e"
+                "de5c4044.d4e0f"
             ]
         ]
     },
@@ -567,6 +627,15 @@
         "type": "inject",
         "z": "6d3223f8.705524",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": true,
@@ -574,8 +643,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 880,
-        "y": 700,
+        "x": 100,
+        "y": 500,
         "wires": [
             [
                 "f1be23c1.dd096"
@@ -592,8 +661,8 @@
         "format": "handlebars",
         "syntax": "mustache",
         "template": "<iframe src=\"../worldmap\" height=300px ></iframe>",
-        "x": 1040,
-        "y": 700,
+        "x": 260,
+        "y": 500,
         "wires": [
             [
                 "4bab3415.afdf9c"
@@ -606,8 +675,8 @@
         "z": "6d3223f8.705524",
         "name": "How to embed Map in Dashboard",
         "info": "This example shows how to embed the Worldmap \ninto a template node within the `node-red-dashboard`\n\nThe first flow creates a dashboard button that \ngenerates a randon position, with the required \nicon, and passes that to the worldmap. The\nmap is configured to automatically pan to the\nposition of any point that arrives.\n\nThe second flow initialise the dashboard template\nwith the initial map and sets it to a more square shape\nby adjusting the height.",
-        "x": 950,
-        "y": 520,
+        "x": 170,
+        "y": 320,
         "wires": []
     },
     {
@@ -617,8 +686,8 @@
         "name": "",
         "depth": "5",
         "layer": "combined",
-        "x": 1230,
-        "y": 580,
+        "x": 450,
+        "y": 380,
         "wires": [
             [
                 "9b2a29cc.3c53a8"
@@ -629,7 +698,7 @@
         "id": "4bab3415.afdf9c",
         "type": "ui_template",
         "z": "6d3223f8.705524",
-        "group": "cd81d08b.eebb3",
+        "group": "e65b306e.d34778",
         "name": "",
         "order": 0,
         "width": "6",
@@ -637,26 +706,10 @@
         "format": "<div ng-bind-html=\"msg.payload | trusted\"></div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
+        "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 1250,
-        "y": 700,
-        "wires": [
-            [
-                "9b2a29cc.3c53a8"
-            ]
-        ]
-    },
-    {
-        "id": "94a992ae.b4c2e",
-        "type": "flightradar24",
-        "z": "6d3223f8.705524",
-        "lat": "61",
-        "latType": "num",
-        "lon": "-1.45",
-        "lonType": "num",
-        "name": "flightradar node",
-        "x": 1260,
-        "y": 640,
+        "x": 470,
+        "y": 500,
         "wires": [
             [
                 "9b2a29cc.3c53a8"
@@ -667,13 +720,13 @@
         "id": "79c2ac56.4aded4",
         "type": "flightradar24",
         "z": "6d3223f8.705524",
-        "lat": "61",
+        "lat": "32",
         "latType": "num",
-        "lon": "-1.45",
+        "lon": "96",
         "lonType": "num",
         "name": "flightradar node",
-        "x": 540,
-        "y": 380,
+        "x": 380,
+        "y": 140,
         "wires": [
             [
                 "31ab6d91.604d72"
@@ -685,15 +738,15 @@
         "type": "debug",
         "z": "6d3223f8.705524",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 450,
-        "y": 660,
+        "x": 410,
+        "y": 240,
         "wires": []
     },
     {
@@ -701,14 +754,292 @@
         "type": "rx observer",
         "z": "6d3223f8.705524",
         "name": "",
-        "x": 250,
-        "y": 660,
+        "x": 230,
+        "y": 240,
         "wires": [
             [
                 "d2d0685.7418798"
             ],
             [
                 "d2d0685.7418798"
+            ]
+        ]
+    },
+    {
+        "id": "954ea747.50cd7",
+        "type": "debug",
+        "z": "a4330611.11d488",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b92b279f.a68b28",
+        "type": "debug",
+        "z": "a4330611.11d488",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "87589946.7fee9",
+        "type": "debug",
+        "z": "a4330611.11d488",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1109e302.93772d",
+        "type": "ui_ui_control",
+        "z": "a4330611.11d488",
+        "name": "",
+        "events": "all",
+        "x": 920,
+        "y": 700,
+        "wires": [
+            [
+                "b0dad8be.d41d48"
+            ]
+        ]
+    },
+    {
+        "id": "fcc4adf7.fb949",
+        "type": "ui_gauge",
+        "z": "a4330611.11d488",
+        "name": "",
+        "group": "a927b038.cc144",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 790,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6c6fc183.c65358",
+        "type": "ui_text",
+        "z": "a4330611.11d488",
+        "group": "a927b038.cc144",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b0dad8be.d41d48",
+        "type": "ui_button",
+        "z": "a4330611.11d488",
+        "name": "",
+        "group": "a927b038.cc144",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 1130,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7aa53509.8e2c54",
+        "type": "ui_switch",
+        "z": "a4330611.11d488",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "a927b038.cc144",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 760,
+        "y": 720,
+        "wires": [
+            [
+                "1109e302.93772d"
+            ]
+        ]
+    },
+    {
+        "id": "6a0ebd98.b21484",
+        "type": "ui_slider",
+        "z": "a4330611.11d488",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "a927b038.cc144",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "fcc4adf7.fb949",
+                "8418aa27.f7c608"
+            ]
+        ]
+    },
+    {
+        "id": "8418aa27.f7c608",
+        "type": "smxstate",
+        "z": "a4330611.11d488",
+        "name": "",
+        "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
+        "noerr": 0,
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "954ea747.50cd7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c18b532a.41a82",
+        "type": "smxstate",
+        "z": "b70590d4.014528",
+        "name": "",
+        "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
+        "noerr": 0,
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "fa6592fd.1f677"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "84f6fed9.7da88",
+        "type": "finite-state-machine",
+        "z": "b70590d4.014528",
+        "name": "",
+        "fsmDefinition": "{\"state\":{\"status\":\"IDLE\",\"data\":{\"x\":5}},\"transitions\":{\"IDLE\":{\"run\":\"RUNNING\"},\"RUNNING\":{\"stop\":\"IDLE\"}}}",
+        "sendInitialState": true,
+        "sendStateWithoutChange": false,
+        "showTransitionErrors": true,
+        "x": 570,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa6592fd.1f677",
+        "type": "debug",
+        "z": "b70590d4.014528",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a7eaeb9e.739ca8",
+        "type": "inject",
+        "z": "b70590d4.014528",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 400,
+        "wires": [
+            [
+                "c18b532a.41a82"
             ]
         ]
     }
