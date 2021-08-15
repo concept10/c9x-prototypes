@@ -1,7 +1,7 @@
 c9x-friends
 ===========
 
-using node-red as gateway broker
+node-red-prototypes for industrial automation
 
 ### About
 
