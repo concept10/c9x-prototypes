@@ -1,15 +1,8 @@
 [
     {
-        "id": "6d3223f8.705524",
+        "id": "c64b73605173e8a5",
         "type": "tab",
         "label": "Flow 1",
-        "disabled": true,
-        "info": ""
-    },
-    {
-        "id": "e9bd3a91.a8f7c",
-        "type": "tab",
-        "label": "Flow 2",
         "disabled": false,
         "info": ""
     },
@@ -28,29 +21,11 @@
         "info": ""
     },
     {
-        "id": "3ad4440b.02f8dc",
+        "id": "e9bd3a91.a8f7c",
         "type": "tab",
-        "label": "Flow 5",
+        "label": "zeromq demo",
         "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "b34078e6.e60df8",
-        "type": "ui_tab",
-        "z": "6d3223f8.705524",
-        "name": "Home",
-        "icon": "dashboard"
-    },
-    {
-        "id": "cd81d08b.eebb3",
-        "type": "ui_group",
-        "z": "6d3223f8.705524",
-        "name": "Default",
-        "tab": "1c373b05.a90fa5",
-        "order": 1,
-        "disp": true,
-        "width": "11",
-        "collapse": false
+        "info": "zeromq demo flow"
     },
     {
         "id": "136789e3.a6cd76",
@@ -135,7 +110,7 @@
             "name": "Node-RED Dashboard",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "false",
+            "lockMenu": "true",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
@@ -155,10 +130,10 @@
         "type": "ui_group",
         "name": "Group 1",
         "tab": "552bcd8c.71a284",
-        "order": 1,
+        "order": 2,
         "disp": true,
-        "width": "24",
-        "collapse": false
+        "width": "6",
+        "collapse": true
     },
     {
         "id": "e65b306e.d34778",
@@ -178,58 +153,49 @@
         "hidden": false
     },
     {
-        "id": "1c373b05.a90fa5",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "id": "4bb29eacfeb14722",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "b34078e6.e60df8",
+        "order": 2,
+        "disp": true,
+        "width": 6
     },
     {
-        "id": "2122326e.513246",
-        "type": "inject",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 120,
-        "wires": [
-            [
-                "79c2ac56.4aded4",
-                "af43ecd2.052538"
-            ]
-        ]
+        "id": "7732812bd9569c0b",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "552bcd8c.71a284",
+        "order": 2,
+        "disp": true,
+        "width": 6
     },
     {
-        "id": "31ab6d91.604d72",
-        "type": "debug",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 220,
-        "wires": []
+        "id": "1d4f010b1d0cfae4",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "552bcd8c.71a284",
+        "order": 3,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "1c3398ff1a94e8dd",
+        "type": "ui_group",
+        "name": "Group 4",
+        "tab": "552bcd8c.71a284",
+        "order": 4,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "edbfcea9ca6c6460",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "a927b038.cc144",
+        "order": 4,
+        "width": 6,
+        "height": 1
     },
     {
         "id": "36fb4c54.384434",
@@ -252,8 +218,8 @@
         "topic": "mytopic",
         "payload": "{\"hello\":\"world\"}",
         "payloadType": "json",
-        "x": 510,
-        "y": 360,
+        "x": 190,
+        "y": 420,
         "wires": [
             [
                 "96201f4b.f0f91"
@@ -268,8 +234,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 810,
-        "y": 480,
+        "x": 490,
+        "y": 540,
         "wires": []
     },
     {
@@ -283,8 +249,8 @@
         "output": "json",
         "isserver": false,
         "intype": "sub",
-        "x": 440,
-        "y": 480,
+        "x": 120,
+        "y": 540,
         "wires": [
             [
                 "b1987961.c4d8e8"
@@ -301,8 +267,8 @@
         "server": "tcp://*:5555",
         "isserver": true,
         "intype": "pub",
-        "x": 800,
-        "y": 400,
+        "x": 500,
+        "y": 420,
         "wires": []
     },
     {
@@ -326,8 +292,8 @@
         "topic": "bool",
         "payload": "true",
         "payloadType": "bool",
-        "x": 460,
-        "y": 320,
+        "x": 140,
+        "y": 380,
         "wires": [
             [
                 "96201f4b.f0f91"
@@ -355,8 +321,8 @@
         "topic": "wulfkit",
         "payload": "woof",
         "payloadType": "str",
-        "x": 470,
-        "y": 240,
+        "x": 150,
+        "y": 300,
         "wires": [
             [
                 "96201f4b.f0f91"
@@ -384,8 +350,8 @@
         "topic": "num",
         "payload": "999",
         "payloadType": "num",
-        "x": 460,
-        "y": 280,
+        "x": 140,
+        "y": 340,
         "wires": [
             [
                 "96201f4b.f0f91"
@@ -400,8 +366,8 @@
         "active": false,
         "console": "false",
         "complete": "true",
-        "x": 810,
-        "y": 540,
+        "x": 490,
+        "y": 600,
         "wires": []
     },
     {
@@ -415,8 +381,8 @@
         "output": "json",
         "isserver": false,
         "intype": "sub",
-        "x": 490,
-        "y": 540,
+        "x": 170,
+        "y": 600,
         "wires": [
             [
                 "b1c97e2b.cf845"
@@ -434,8 +400,8 @@
         "topic": "mybuffer",
         "payload": "",
         "payloadType": "str",
-        "x": 460,
-        "y": 440,
+        "x": 140,
+        "y": 500,
         "wires": [
             [
                 "66c3fe79.7a99f"
@@ -452,8 +418,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 630,
-        "y": 440,
+        "x": 290,
+        "y": 500,
         "wires": [
             [
                 "96201f4b.f0f91"
@@ -481,8 +447,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 710,
-        "y": 120,
+        "x": 150,
+        "y": 200,
         "wires": [
             [
                 "76294a30.178044"
@@ -499,8 +465,8 @@
         "server": "tcp://*:4444",
         "isserver": true,
         "intype": "push",
-        "x": 1060,
-        "y": 120,
+        "x": 500,
+        "y": 200,
         "wires": []
     },
     {
@@ -514,8 +480,8 @@
         "output": "json",
         "isserver": false,
         "intype": "pull",
-        "x": 730,
-        "y": 180,
+        "x": 110,
+        "y": 240,
         "wires": [
             [
                 "c138fcb6.4e343"
@@ -530,8 +496,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 1050,
-        "y": 180,
+        "x": 470,
+        "y": 240,
         "wires": []
     },
     {
@@ -545,223 +511,11 @@
         "syntax": "mustache",
         "template": "outlaw-payload: {{payload}} !",
         "output": "str",
-        "x": 920,
-        "y": 120,
+        "x": 320,
+        "y": 200,
         "wires": [
             [
                 "23cf851d.0d7c2a"
-            ]
-        ]
-    },
-    {
-        "id": "9b2a29cc.3c53a8",
-        "type": "worldmap",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "lat": "1",
-        "lon": "-1.45",
-        "zoom": "",
-        "layer": "Hike Bike",
-        "cluster": "",
-        "maxage": "",
-        "usermenu": "show",
-        "layers": "show",
-        "panit": "true",
-        "hiderightclick": "false",
-        "coords": "none",
-        "allowFileDrop": "true",
-        "path": "",
-        "x": 750,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "1714967f.e691ea",
-        "type": "inject",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 110,
-        "y": 380,
-        "wires": [
-            [
-                "1b24ad2f.198453"
-            ]
-        ]
-    },
-    {
-        "id": "1b24ad2f.198453",
-        "type": "function",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "func": "// create random position\nvar lat = 51 + Math.random() * 0.2;\nvar lon = -1.45 + Math.random() * 0.2;\nmsg.payload={\n    lat:lat, \n    lon:lon, \n    name:\"Mike\", \n    icon:\"male\", \n    color:\"#001\"};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 260,
-        "y": 380,
-        "wires": [
-            [
-                "de5c4044.d4e0f"
-            ]
-        ]
-    },
-    {
-        "id": "5af27cae.299144",
-        "type": "inject",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 100,
-        "y": 500,
-        "wires": [
-            [
-                "f1be23c1.dd096"
-            ]
-        ]
-    },
-    {
-        "id": "f1be23c1.dd096",
-        "type": "template",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<iframe src=\"../worldmap\" height=300px ></iframe>",
-        "x": 260,
-        "y": 500,
-        "wires": [
-            [
-                "4bab3415.afdf9c"
-            ]
-        ]
-    },
-    {
-        "id": "223f301c.54ea9",
-        "type": "comment",
-        "z": "6d3223f8.705524",
-        "name": "How to embed Map in Dashboard",
-        "info": "This example shows how to embed the Worldmap \ninto a template node within the `node-red-dashboard`\n\nThe first flow creates a dashboard button that \ngenerates a randon position, with the required \nicon, and passes that to the worldmap. The\nmap is configured to automatically pan to the\nposition of any point that arrives.\n\nThe second flow initialise the dashboard template\nwith the initial map and sets it to a more square shape\nby adjusting the height.",
-        "x": 170,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "de5c4044.d4e0f",
-        "type": "worldmap-tracks",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "depth": "5",
-        "layer": "combined",
-        "x": 450,
-        "y": 380,
-        "wires": [
-            [
-                "9b2a29cc.3c53a8"
-            ]
-        ]
-    },
-    {
-        "id": "4bab3415.afdf9c",
-        "type": "ui_template",
-        "z": "6d3223f8.705524",
-        "group": "e65b306e.d34778",
-        "name": "",
-        "order": 0,
-        "width": "6",
-        "height": "6",
-        "format": "<div ng-bind-html=\"msg.payload | trusted\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "x": 470,
-        "y": 500,
-        "wires": [
-            [
-                "9b2a29cc.3c53a8"
-            ]
-        ]
-    },
-    {
-        "id": "79c2ac56.4aded4",
-        "type": "flightradar24",
-        "z": "6d3223f8.705524",
-        "lat": "32",
-        "latType": "num",
-        "lon": "96",
-        "lonType": "num",
-        "name": "flightradar node",
-        "x": 380,
-        "y": 140,
-        "wires": [
-            [
-                "31ab6d91.604d72"
-            ]
-        ]
-    },
-    {
-        "id": "d2d0685.7418798",
-        "type": "debug",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 410,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "af43ecd2.052538",
-        "type": "rx observer",
-        "z": "6d3223f8.705524",
-        "name": "",
-        "x": 230,
-        "y": 240,
-        "wires": [
-            [
-                "d2d0685.7418798"
-            ],
-            [
-                "d2d0685.7418798"
             ]
         ]
     },
@@ -777,41 +531,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "b92b279f.a68b28",
-        "type": "debug",
-        "z": "a4330611.11d488",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "87589946.7fee9",
-        "type": "debug",
-        "z": "a4330611.11d488",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 460,
+        "x": 690,
+        "y": 80,
         "wires": []
     },
     {
@@ -820,8 +541,8 @@
         "z": "a4330611.11d488",
         "name": "",
         "events": "all",
-        "x": 920,
-        "y": 700,
+        "x": 240,
+        "y": 200,
         "wires": [
             [
                 "b0dad8be.d41d48"
@@ -834,15 +555,15 @@
         "z": "a4330611.11d488",
         "name": "",
         "group": "a927b038.cc144",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
-        "gtype": "gage",
+        "gtype": "donut",
         "title": "gauge",
-        "label": "units",
+        "label": "kW",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "1000",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -850,24 +571,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 790,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "6c6fc183.c65358",
-        "type": "ui_text",
-        "z": "a4330611.11d488",
-        "group": "a927b038.cc144",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 950,
-        "y": 640,
+        "x": 710,
+        "y": 280,
         "wires": []
     },
     {
@@ -876,7 +581,7 @@
         "z": "a4330611.11d488",
         "name": "",
         "group": "a927b038.cc144",
-        "order": 3,
+        "order": 6,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -888,8 +593,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 1130,
-        "y": 720,
+        "x": 450,
+        "y": 220,
         "wires": [
             []
         ]
@@ -902,7 +607,7 @@
         "label": "switch",
         "tooltip": "",
         "group": "a927b038.cc144",
-        "order": 4,
+        "order": 7,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -917,8 +622,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 760,
-        "y": 720,
+        "x": 80,
+        "y": 220,
         "wires": [
             [
                 "1109e302.93772d"
@@ -933,17 +638,18 @@
         "label": "slider",
         "tooltip": "",
         "group": "a927b038.cc144",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
         "outs": "all",
         "topic": "",
+        "topicType": "str",
         "min": 0,
-        "max": 10,
-        "step": 1,
-        "x": 210,
-        "y": 360,
+        "max": "10000",
+        "step": "7",
+        "x": 130,
+        "y": 40,
         "wires": [
             [
                 "fcc4adf7.fb949",
@@ -958,8 +664,8 @@
         "name": "",
         "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
         "noerr": 0,
-        "x": 400,
-        "y": 360,
+        "x": 320,
+        "y": 40,
         "wires": [
             [
                 "954ea747.50cd7"
@@ -1035,12 +741,1015 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 550,
-        "y": 400,
+        "x": 340,
+        "y": 300,
         "wires": [
             [
                 "c18b532a.41a82"
             ]
         ]
+    },
+    {
+        "id": "55f90724e449a142",
+        "type": "ui_gauge",
+        "z": "a4330611.11d488",
+        "name": "",
+        "group": "4bb29eacfeb14722",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 690,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "256e60733ec5e3d6",
+        "type": "ui_slider",
+        "z": "a4330611.11d488",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "a927b038.cc144",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "topicType": "str",
+        "min": 0,
+        "max": "10000",
+        "step": "7",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "55f90724e449a142"
+            ]
+        ]
+    },
+    {
+        "id": "44cce62424c425c5",
+        "type": "smxstate",
+        "z": "a4330611.11d488",
+        "name": "",
+        "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
+        "noerr": 0,
+        "x": 260,
+        "y": 680,
+        "wires": [
+            [
+                "acc6aa2a51afe855"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e2e25dcf88986cff",
+        "type": "finite-state-machine",
+        "z": "a4330611.11d488",
+        "name": "",
+        "fsmDefinition": "{\"state\":{\"status\":\"IDLE\",\"data\":{\"x\":5}},\"transitions\":{\"IDLE\":{\"run\":\"RUNNING\"},\"RUNNING\":{\"stop\":\"IDLE\"}}}",
+        "sendInitialState": true,
+        "sendStateWithoutChange": false,
+        "showTransitionErrors": true,
+        "x": 290,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acc6aa2a51afe855",
+        "type": "debug",
+        "z": "a4330611.11d488",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "4ac90917e3cb1dab",
+        "type": "inject",
+        "z": "a4330611.11d488",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 680,
+        "wires": [
+            [
+                "44cce62424c425c5"
+            ]
+        ]
+    },
+    {
+        "id": "46e5c213285ff57e",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "e5486bbf99af5013",
+                "57868dbddde5f434"
+            ]
+        ]
+    },
+    {
+        "id": "4f43b51655472e3d",
+        "type": "Boolean",
+        "z": "c64b73605173e8a5",
+        "name": "Random Boolean",
+        "kind": "truth",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "1628e4b11d594356"
+            ]
+        ]
+    },
+    {
+        "id": "b74d40e5ec6afb07",
+        "type": "Name",
+        "z": "c64b73605173e8a5",
+        "name": "Random Name",
+        "nameLength": 2,
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "69894b683c7bc5ed"
+            ]
+        ]
+    },
+    {
+        "id": "3f0eda633b932b8b",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "69894b683c7bc5ed",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1628e4b11d594356",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e5486bbf99af5013",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "85a255984921c11e",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 80,
+        "y": 160,
+        "wires": [
+            [
+                "46e5c213285ff57e"
+            ]
+        ]
+    },
+    {
+        "id": "99c0f65b7ca5c5f3",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "4f43b51655472e3d"
+            ]
+        ]
+    },
+    {
+        "id": "ae5c966609c32772",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "b74d40e5ec6afb07"
+            ]
+        ]
+    },
+    {
+        "id": "8acb90a53ee60efd",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "3f0eda633b932b8b"
+            ]
+        ]
+    },
+    {
+        "id": "57868dbddde5f434",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "ch_kw_1",
+        "group": "a927b038.cc144",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "13db97089e7a8925",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "9d15e04f8e1aab17",
+                "81be79675b1b747b"
+            ]
+        ]
+    },
+    {
+        "id": "9d15e04f8e1aab17",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6ef2fcfcec9147bb",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "13db97089e7a8925"
+            ]
+        ]
+    },
+    {
+        "id": "81be79675b1b747b",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 500,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "10a37ee6b347a4c1",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 890,
+        "y": 160,
+        "wires": [
+            [
+                "01bafa62192d9159",
+                "3fb5537db3fe4e05"
+            ]
+        ]
+    },
+    {
+        "id": "01bafa62192d9159",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "06807ba33b771724",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "10a37ee6b347a4c1"
+            ]
+        ]
+    },
+    {
+        "id": "3fb5537db3fe4e05",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "ch_kW_3",
+        "group": "1d4f010b1d0cfae4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "151514fb059d655d",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 870,
+        "y": 280,
+        "wires": [
+            [
+                "7ea450af3a174695",
+                "90c742a33e5a97a1"
+            ]
+        ]
+    },
+    {
+        "id": "7ea450af3a174695",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1ae9fce2df51fee4",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 660,
+        "y": 280,
+        "wires": [
+            [
+                "151514fb059d655d"
+            ]
+        ]
+    },
+    {
+        "id": "90c742a33e5a97a1",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "ch_kW_4",
+        "group": "1c3398ff1a94e8dd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1080,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a3af45a23dc37999",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1470,
+        "y": 160,
+        "wires": [
+            [
+                "51984ec58aecd4d8",
+                "767f62d6a9e3616d"
+            ]
+        ]
+    },
+    {
+        "id": "51984ec58aecd4d8",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "290545038d7de518",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1260,
+        "y": 160,
+        "wires": [
+            [
+                "a3af45a23dc37999"
+            ]
+        ]
+    },
+    {
+        "id": "767f62d6a9e3616d",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "group": "e65b306e.d34778",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "444ed6931fe02881",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1470,
+        "y": 280,
+        "wires": [
+            [
+                "b4a98110be34c2d0",
+                "c711f311a8645eea"
+            ]
+        ]
+    },
+    {
+        "id": "b4a98110be34c2d0",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c90b255fb0493291",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1260,
+        "y": 280,
+        "wires": [
+            [
+                "444ed6931fe02881"
+            ]
+        ]
+    },
+    {
+        "id": "c711f311a8645eea",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "group": "e65b306e.d34778",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1670,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cae76b03186cf7d5",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 2050,
+        "y": 160,
+        "wires": [
+            [
+                "7654cbeb3bfeeba4",
+                "b0cb5d80e6af251e"
+            ]
+        ]
+    },
+    {
+        "id": "7654cbeb3bfeeba4",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ec1d1ba148ad6d26",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1840,
+        "y": 160,
+        "wires": [
+            [
+                "cae76b03186cf7d5"
+            ]
+        ]
+    },
+    {
+        "id": "b0cb5d80e6af251e",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "group": "e65b306e.d34778",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2250,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4f934013fd0ecc41",
+        "type": "Number",
+        "z": "c64b73605173e8a5",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 2050,
+        "y": 280,
+        "wires": [
+            [
+                "e933e864da3f50ee",
+                "415c36ef8496836a"
+            ]
+        ]
+    },
+    {
+        "id": "e933e864da3f50ee",
+        "type": "debug",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "aba230be01d9c936",
+        "type": "inject",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1840,
+        "y": 280,
+        "wires": [
+            [
+                "4f934013fd0ecc41"
+            ]
+        ]
+    },
+    {
+        "id": "415c36ef8496836a",
+        "type": "ui_gauge",
+        "z": "c64b73605173e8a5",
+        "name": "",
+        "group": "e65b306e.d34778",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2250,
+        "y": 360,
+        "wires": []
     }
 ]
