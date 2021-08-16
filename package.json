@@ -9,7 +9,7 @@
         "node-red-contrib-xstate-machine": "1.1.1",
         "node-red-contrib-finite-statemachine": "2.0.0",
         "node-red-contrib-pid": "1.1.7",
-        "node-red-contrib-ui-level": "0.1.44"
+        "node-red-node-random": "0.4.0"
     },
     "node-red": {
         "settings": {
