@@ -49,6 +49,13 @@
         "info": ""
     },
     {
+        "id": "efcca138bbfcdda5",
+        "type": "tab",
+        "label": "Msiler",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "136789e3.a6cd76",
         "type": "ui_base",
         "theme": {
@@ -124,7 +131,8 @@
                 "primary": "indigo",
                 "accents": "blue",
                 "warn": "red",
-                "background": "grey"
+                "background": "grey",
+                "palette": "light"
             }
         },
         "site": {
