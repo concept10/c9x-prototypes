@@ -51,7 +51,7 @@
     {
         "id": "efcca138bbfcdda5",
         "type": "tab",
-        "label": "Msiler",
+        "label": "Mailer",
         "disabled": false,
         "info": ""
     },
@@ -115,9 +115,7 @@
             "76294a30.178044"
         ],
         "x": 34,
-        "y": 159,
-        "w": 552,
-        "h": 482
+        "y": 159
     },
     {
         "id": "f59110c561646987",
@@ -152,9 +150,7 @@
             "ba10964a9ff8f58c"
         ],
         "x": 194,
-        "y": 159,
-        "w": 852,
-        "h": 322
+        "y": 159
     },
     {
         "id": "136789e3.a6cd76",
@@ -7115,8 +7111,8 @@
         "z": "efcca138bbfcdda5",
         "name": "",
         "transport": "{\n   \"host\": \"host\",\n   \"port\": 465,\n   \"secure\": true,\n   \"auth\": {\n       \"user\": \"user\",\n       \"pass\": \"password\"\n   }\n}",
-        "x": 1040,
-        "y": 540,
+        "x": 370,
+        "y": 160,
         "wires": []
     },
     {
