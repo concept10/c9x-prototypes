@@ -1,0 +1,20 @@
+{
+    "name": "c9x-friends",
+    "description": "using node-red as gateway broker",
+    "version": "0.0.1",
+    "dependencies": {
+        "random-generator_node-red-contrib": "1.0.0",
+        "node-red-dashboard": "2.28.1",
+        "node-red-contrib-zeromq": "0.0.10",
+        "node-red-contrib-xstate-machine": "1.1.1",
+        "node-red-contrib-finite-statemachine": "2.0.0",
+        "node-red-contrib-pid": "1.1.7",
+        "node-red-node-random": "0.4.0"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
