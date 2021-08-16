@@ -6974,5 +6974,15 @@
         "x": 810,
         "y": 880,
         "wires": []
+    },
+    {
+        "id": "d9d0cd88c6f9bfad",
+        "type": "mailer",
+        "z": "efcca138bbfcdda5",
+        "name": "",
+        "transport": "{\n   \"host\": \"host\",\n   \"port\": 465,\n   \"secure\": true,\n   \"auth\": {\n       \"user\": \"user\",\n       \"pass\": \"password\"\n   }\n}",
+        "x": 1040,
+        "y": 540,
+        "wires": []
     }
 ]
