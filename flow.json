@@ -3,21 +3,21 @@
         "id": "c64b73605173e8a5",
         "type": "tab",
         "label": "Flow 1",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "a4330611.11d488",
         "type": "tab",
         "label": "Flow 3",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "b70590d4.014528",
         "type": "tab",
         "label": "Flow 4",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -26,6 +26,27 @@
         "label": "zeromq demo",
         "disabled": true,
         "info": "zeromq demo flow"
+    },
+    {
+        "id": "9e410adfd4e2d55d",
+        "type": "tab",
+        "label": "Flow 1 Copy",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "2f387a5731899d75",
+        "type": "tab",
+        "label": "PowerX",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c6bf045460c61cd1",
+        "type": "tab",
+        "label": "Watch",
+        "disabled": false,
+        "info": ""
     },
     {
         "id": "136789e3.a6cd76",
@@ -107,9 +128,9 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "RocketPropulsion",
             "hideToolbar": "false",
-            "allowSwipe": "false",
+            "allowSwipe": "true",
             "lockMenu": "true",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
@@ -149,7 +170,7 @@
         "id": "552bcd8c.71a284",
         "type": "ui_tab",
         "name": "Home",
-        "icon": "dashboard",
+        "icon": "home",
         "disabled": false,
         "hidden": false
     },
@@ -169,7 +190,8 @@
         "tab": "552bcd8c.71a284",
         "order": 2,
         "disp": true,
-        "width": 6
+        "width": "6",
+        "collapse": true
     },
     {
         "id": "1d4f010b1d0cfae4",
@@ -178,7 +200,8 @@
         "tab": "552bcd8c.71a284",
         "order": 3,
         "disp": true,
-        "width": 6
+        "width": "6",
+        "collapse": true
     },
     {
         "id": "1c3398ff1a94e8dd",
@@ -187,16 +210,8 @@
         "tab": "552bcd8c.71a284",
         "order": 4,
         "disp": true,
-        "width": 6
-    },
-    {
-        "id": "edbfcea9ca6c6460",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "a927b038.cc144",
-        "order": 4,
-        "width": 6,
-        "height": 1
+        "width": "6",
+        "collapse": true
     },
     {
         "id": "d6eff413da9833cb",
@@ -205,6 +220,131 @@
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "f6469a9737dd716b",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "a927b038.cc144",
+        "order": 4,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "679d51c649527d34",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "552bcd8c.71a284",
+        "order": 5,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "9620a663311f4dcd",
+        "type": "ui_group",
+        "name": "Group 6",
+        "tab": "552bcd8c.71a284",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "fd9df50e8a9949a5",
+        "type": "ui_group",
+        "name": "Group 7",
+        "tab": "552bcd8c.71a284",
+        "order": 7,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "e5223f03d598437c",
+        "type": "ui_group",
+        "name": "Group 8",
+        "tab": "552bcd8c.71a284",
+        "order": 8,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "cbb124f82bd62ce4",
+        "type": "ui_tab",
+        "d": true,
+        "name": "Turbine",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6970dda954964792",
+        "type": "ui_group",
+        "name": "Bleed Air",
+        "tab": "cbb124f82bd62ce4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "9fbeb5d6d3fade44",
+        "type": "ui_group",
+        "name": "Fuel Oil",
+        "tab": "cbb124f82bd62ce4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "21b8a028e73a0f55",
+        "type": "ui_group",
+        "name": "Lube Oil",
+        "tab": "cbb124f82bd62ce4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "277287a92963e672",
+        "type": "ui_tab",
+        "name": "PowerX",
+        "icon": "battery_alert",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9259485d57bd7554",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "277287a92963e672",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "84a443270cd66264",
+        "type": "ui_tab",
+        "name": "Watch",
+        "icon": "watch",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ead9bb7ff7cde8c1",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "84a443270cd66264",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
     },
     {
         "id": "36fb4c54.384434",
@@ -550,8 +690,8 @@
         "z": "a4330611.11d488",
         "name": "",
         "events": "all",
-        "x": 240,
-        "y": 200,
+        "x": 260,
+        "y": 140,
         "wires": [
             [
                 "b0dad8be.d41d48"
@@ -563,7 +703,7 @@
         "type": "ui_gauge",
         "z": "a4330611.11d488",
         "name": "",
-        "group": "a927b038.cc144",
+        "group": "6970dda954964792",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -602,8 +742,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 450,
-        "y": 220,
+        "x": 390,
+        "y": 140,
         "wires": [
             []
         ]
@@ -631,8 +771,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 80,
-        "y": 220,
+        "x": 130,
+        "y": 140,
         "wires": [
             [
                 "1109e302.93772d"
@@ -670,6 +810,7 @@
         "id": "8418aa27.f7c608",
         "type": "smxstate",
         "z": "a4330611.11d488",
+        "d": true,
         "name": "",
         "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
         "noerr": 0,
@@ -765,7 +906,7 @@
         "type": "ui_gauge",
         "z": "a4330611.11d488",
         "name": "",
-        "group": "4bb29eacfeb14722",
+        "group": "9620a663311f4dcd",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -782,8 +923,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 690,
-        "y": 380,
+        "x": 270,
+        "y": 200,
         "wires": []
     },
     {
@@ -804,8 +945,8 @@
         "min": 0,
         "max": "10000",
         "step": "7",
-        "x": 190,
-        "y": 400,
+        "x": 130,
+        "y": 200,
         "wires": [
             [
                 "55f90724e449a142"
@@ -816,6 +957,7 @@
         "id": "44cce62424c425c5",
         "type": "smxstate",
         "z": "a4330611.11d488",
+        "d": true,
         "name": "",
         "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
         "noerr": 0,
@@ -832,13 +974,14 @@
         "id": "e2e25dcf88986cff",
         "type": "finite-state-machine",
         "z": "a4330611.11d488",
+        "d": true,
         "name": "",
         "fsmDefinition": "{\"state\":{\"status\":\"IDLE\",\"data\":{\"x\":5}},\"transitions\":{\"IDLE\":{\"run\":\"RUNNING\"},\"RUNNING\":{\"stop\":\"IDLE\"}}}",
         "sendInitialState": true,
         "sendStateWithoutChange": false,
         "showTransitionErrors": true,
-        "x": 290,
-        "y": 600,
+        "x": 300,
+        "y": 640,
         "wires": [
             []
         ]
@@ -855,7 +998,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
+        "x": 410,
         "y": 680,
         "wires": []
     },
@@ -880,7 +1023,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 60,
+        "x": 120,
         "y": 680,
         "wires": [
             [
@@ -1477,7 +1620,7 @@
         "d": true,
         "name": "spare",
         "group": "1c3398ff1a94e8dd",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -1566,8 +1709,8 @@
         "z": "c64b73605173e8a5",
         "d": true,
         "name": "name",
-        "group": "1c3398ff1a94e8dd",
-        "order": 1,
+        "group": "679d51c649527d34",
+        "order": 2,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -1654,10 +1797,9 @@
         "id": "b0cb5d80e6af251e",
         "type": "ui_gauge",
         "z": "c64b73605173e8a5",
-        "d": true,
         "name": "spare",
-        "group": "1c3398ff1a94e8dd",
-        "order": 3,
+        "group": "fd9df50e8a9949a5",
+        "order": 4,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -1744,10 +1886,9 @@
         "id": "415c36ef8496836a",
         "type": "ui_gauge",
         "z": "c64b73605173e8a5",
-        "d": true,
         "name": "spare",
-        "group": "1c3398ff1a94e8dd",
-        "order": 4,
+        "group": "e5223f03d598437c",
+        "order": 5,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -1836,7 +1977,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -1925,7 +2066,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2014,7 +2155,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 4,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2103,7 +2244,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 5,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2192,7 +2333,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 6,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2281,7 +2422,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 7,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2418,7 +2559,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 8,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2507,7 +2648,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 9,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2596,7 +2737,7 @@
         "z": "c64b73605173e8a5",
         "name": "ch_kW_2",
         "group": "7732812bd9569c0b",
-        "order": 1,
+        "order": 10,
         "width": 0,
         "height": 0,
         "gtype": "donut",
@@ -2686,7 +2827,7 @@
         "payload": "2.8",
         "payloadType": "num",
         "x": 1520,
-        "y": 780,
+        "y": 760,
         "wires": [
             [
                 "b5e9abafaae6f648"
@@ -2823,6 +2964,4007 @@
         "statusType": "auto",
         "x": 770,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "189abc5eb0ecc469",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "5d45fecbe01f9a4e",
+                "fa75554a75ced868"
+            ]
+        ]
+    },
+    {
+        "id": "9bddc678f8b1a638",
+        "type": "Boolean",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Boolean",
+        "kind": "truth",
+        "x": 310,
+        "y": 920,
+        "wires": [
+            [
+                "915f1260336a260e"
+            ]
+        ]
+    },
+    {
+        "id": "5b35db9e182a394a",
+        "type": "Name",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Name",
+        "nameLength": 2,
+        "x": 320,
+        "y": 980,
+        "wires": [
+            [
+                "0b9cd99d133d6a4b"
+            ]
+        ]
+    },
+    {
+        "id": "07aa2f46a2bf5855",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "0b9cd99d133d6a4b",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "915f1260336a260e",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5d45fecbe01f9a4e",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "0661eb0f3393abad",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 80,
+        "y": 160,
+        "wires": [
+            [
+                "189abc5eb0ecc469"
+            ]
+        ]
+    },
+    {
+        "id": "3821d3d654b7dd60",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 920,
+        "wires": [
+            [
+                "9bddc678f8b1a638"
+            ]
+        ]
+    },
+    {
+        "id": "e38ed4f7068e8071",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 980,
+        "wires": [
+            [
+                "5b35db9e182a394a"
+            ]
+        ]
+    },
+    {
+        "id": "f8cfb4391163a99c",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1040,
+        "wires": [
+            [
+                "07aa2f46a2bf5855"
+            ]
+        ]
+    },
+    {
+        "id": "fa75554a75ced868",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kw_1",
+        "group": "6970dda954964792",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 480,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "61c65757508c90d3",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "71f9fdcc890190ac",
+                "83a028433643ef8f"
+            ]
+        ]
+    },
+    {
+        "id": "71f9fdcc890190ac",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "da53603e4445e0f6",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "61c65757508c90d3"
+            ]
+        ]
+    },
+    {
+        "id": "83a028433643ef8f",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "9fbeb5d6d3fade44",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 460,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "85f608e423f4b3e8",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 890,
+        "y": 160,
+        "wires": [
+            [
+                "43a2754cec353688",
+                "51d9889b95bccbf2"
+            ]
+        ]
+    },
+    {
+        "id": "43a2754cec353688",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "6779bbfd4d476fd0",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "85f608e423f4b3e8"
+            ]
+        ]
+    },
+    {
+        "id": "51d9889b95bccbf2",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_3",
+        "group": "e65b306e.d34778",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1100,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c1dfbf06a7af14ae",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 870,
+        "y": 280,
+        "wires": [
+            [
+                "90e4e6479b3a5a78",
+                "32567afd3a4abdd7"
+            ]
+        ]
+    },
+    {
+        "id": "90e4e6479b3a5a78",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2ad81e2c8ac192c6",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 660,
+        "y": 280,
+        "wires": [
+            [
+                "c1dfbf06a7af14ae"
+            ]
+        ]
+    },
+    {
+        "id": "32567afd3a4abdd7",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_4",
+        "group": "1c3398ff1a94e8dd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1080,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f964cb51e00c9f70",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1470,
+        "y": 160,
+        "wires": [
+            [
+                "62534479989fa238",
+                "01bcc745885ca751"
+            ]
+        ]
+    },
+    {
+        "id": "62534479989fa238",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "25964ce0e4c91ae7",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1260,
+        "y": 160,
+        "wires": [
+            [
+                "f964cb51e00c9f70"
+            ]
+        ]
+    },
+    {
+        "id": "01bcc745885ca751",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "Total Power",
+        "group": "e65b306e.d34778",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Total Power",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1690,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3a9258e055a0922e",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1470,
+        "y": 280,
+        "wires": [
+            [
+                "6b6ea87f3a555089",
+                "727a5a12f8e694b8"
+            ]
+        ]
+    },
+    {
+        "id": "6b6ea87f3a555089",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fad04bf6989f89de",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1260,
+        "y": 280,
+        "wires": [
+            [
+                "3a9258e055a0922e"
+            ]
+        ]
+    },
+    {
+        "id": "727a5a12f8e694b8",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "d": true,
+        "name": "name",
+        "group": "679d51c649527d34",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1670,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "552366b1d02168c1",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 2050,
+        "y": 160,
+        "wires": [
+            [
+                "e7d3abcfd6652453",
+                "7e5a640192e1afea"
+            ]
+        ]
+    },
+    {
+        "id": "e7d3abcfd6652453",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7cec334b6f8953c9",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1840,
+        "y": 160,
+        "wires": [
+            [
+                "552366b1d02168c1"
+            ]
+        ]
+    },
+    {
+        "id": "7e5a640192e1afea",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "spare",
+        "group": "fd9df50e8a9949a5",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2250,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "988b3c0f07642721",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 2050,
+        "y": 280,
+        "wires": [
+            [
+                "67bf8cf0d4c9d031",
+                "7a2c2c185d79998b"
+            ]
+        ]
+    },
+    {
+        "id": "67bf8cf0d4c9d031",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2250,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3f92ed576b33ab88",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1840,
+        "y": 280,
+        "wires": [
+            [
+                "988b3c0f07642721"
+            ]
+        ]
+    },
+    {
+        "id": "7a2c2c185d79998b",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "spare",
+        "group": "9259485d57bd7554",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2250,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ce863ff12b919b62",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "f3a279f3c4409053",
+                "d3877b24d4e96de0"
+            ]
+        ]
+    },
+    {
+        "id": "f3a279f3c4409053",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e8e72dc2ada105a4",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 120,
+        "y": 480,
+        "wires": [
+            [
+                "ce863ff12b919b62"
+            ]
+        ]
+    },
+    {
+        "id": "d3877b24d4e96de0",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 480,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "509af2c87a476ceb",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 290,
+        "y": 560,
+        "wires": [
+            [
+                "b3d2085db9796ee0",
+                "f3c58bb3ad5cdc4a"
+            ]
+        ]
+    },
+    {
+        "id": "b3d2085db9796ee0",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e4f8bbd342a3c325",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "509af2c87a476ceb"
+            ]
+        ]
+    },
+    {
+        "id": "f3c58bb3ad5cdc4a",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 480,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a7630c017bc4c0cd",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "f6339c622c87b179",
+                "b5a2b64283b740cd"
+            ]
+        ]
+    },
+    {
+        "id": "f6339c622c87b179",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "9ffaa586665bf616",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "a7630c017bc4c0cd"
+            ]
+        ]
+    },
+    {
+        "id": "b5a2b64283b740cd",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 480,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "76e05c7a302e66f3",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "1262e7a1900c86bc",
+                "b2d810b388a181e9"
+            ]
+        ]
+    },
+    {
+        "id": "1262e7a1900c86bc",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1410408d191e5c08",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 680,
+        "y": 480,
+        "wires": [
+            [
+                "76e05c7a302e66f3"
+            ]
+        ]
+    },
+    {
+        "id": "b2d810b388a181e9",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1040,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "7118777b2a5d5910",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 850,
+        "y": 560,
+        "wires": [
+            [
+                "33672e2ae4e35d62",
+                "f084932be6cf8d15"
+            ]
+        ]
+    },
+    {
+        "id": "33672e2ae4e35d62",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c82fee744dd4cb32",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [
+                "7118777b2a5d5910"
+            ]
+        ]
+    },
+    {
+        "id": "f084932be6cf8d15",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1040,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "95615c05d66c5540",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 850,
+        "y": 640,
+        "wires": [
+            [
+                "dc5f47f25f6f1e90",
+                "22c792d0b1e6d62e"
+            ]
+        ]
+    },
+    {
+        "id": "dc5f47f25f6f1e90",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "dd75421fb3192c16",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 680,
+        "y": 640,
+        "wires": [
+            [
+                "95615c05d66c5540"
+            ]
+        ]
+    },
+    {
+        "id": "22c792d0b1e6d62e",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1040,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "8781289e870937fb",
+        "type": "PID",
+        "z": "9e410adfd4e2d55d",
+        "name": "PID",
+        "setpoint": 21,
+        "pb": 1,
+        "ti": 9999,
+        "td": 0,
+        "integral_default": 0.5,
+        "smooth_factor": 3,
+        "max_interval": 600,
+        "enable": 1,
+        "disabled_op": 0,
+        "x": 1890,
+        "y": 660,
+        "wires": [
+            [
+                "b3328b30e88f1883"
+            ]
+        ]
+    },
+    {
+        "id": "1fa0cc2f8aaf2a3c",
+        "type": "PIDLoop",
+        "z": "9e410adfd4e2d55d",
+        "Kp": 1,
+        "Ki": 1,
+        "Kd": 1,
+        "recalcTime": 5,
+        "setPointTopic": "thermostat/setpoint/sp/1",
+        "fireTopic": "fire/1",
+        "fixedTopic": "fixed/1",
+        "fixedValue": 0,
+        "deadBand": 1,
+        "x": 1900,
+        "y": 780,
+        "wires": [
+            [
+                "1ad7f62c5f9a1c1f"
+            ],
+            [
+                "b50aed776441245c"
+            ]
+        ]
+    },
+    {
+        "id": "118758c3c4508b3d",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "2.5",
+        "maximum": "4.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1650,
+        "y": 840,
+        "wires": [
+            [
+                "3ae9b0ede01a14e9",
+                "05baf4d4f1178c92",
+                "8781289e870937fb",
+                "1fa0cc2f8aaf2a3c"
+            ]
+        ]
+    },
+    {
+        "id": "3ae9b0ede01a14e9",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c9aab0d6a1b0a483",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1480,
+        "y": 840,
+        "wires": [
+            [
+                "118758c3c4508b3d"
+            ]
+        ]
+    },
+    {
+        "id": "05baf4d4f1178c92",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2180,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "9321d65c233a79ed",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1650,
+        "y": 920,
+        "wires": [
+            [
+                "362fa10b75add50e",
+                "12268fefffddae9a"
+            ]
+        ]
+    },
+    {
+        "id": "362fa10b75add50e",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "09a425b414a85a6c",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1480,
+        "y": 920,
+        "wires": [
+            [
+                "9321d65c233a79ed"
+            ]
+        ]
+    },
+    {
+        "id": "12268fefffddae9a",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2180,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "7bf23cf813fe63b1",
+        "type": "Number",
+        "z": "9e410adfd4e2d55d",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1650,
+        "y": 1000,
+        "wires": [
+            [
+                "f781665514e67c22",
+                "c418f30fd9e273fb"
+            ]
+        ]
+    },
+    {
+        "id": "f781665514e67c22",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "780320e42ff79356",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1480,
+        "y": 1000,
+        "wires": [
+            [
+                "7bf23cf813fe63b1"
+            ]
+        ]
+    },
+    {
+        "id": "c418f30fd9e273fb",
+        "type": "ui_gauge",
+        "z": "9e410adfd4e2d55d",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 2180,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "b3328b30e88f1883",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "1ad7f62c5f9a1c1f",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2170,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "b50aed776441245c",
+        "type": "debug",
+        "z": "9e410adfd4e2d55d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2170,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "dd302d77eea68445",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "thermostat/setpoint/sp/1",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 1520,
+        "y": 780,
+        "wires": [
+            [
+                "1fa0cc2f8aaf2a3c"
+            ]
+        ]
+    },
+    {
+        "id": "29d0bb991db41ff6",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fire/1",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1520,
+        "y": 720,
+        "wires": [
+            [
+                "1fa0cc2f8aaf2a3c"
+            ]
+        ]
+    },
+    {
+        "id": "1b7858b2b175cbed",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "setpoint",
+                "v": "2.8",
+                "vt": "num"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "setpoint/1",
+        "x": 1500,
+        "y": 620,
+        "wires": [
+            [
+                "8781289e870937fb"
+            ]
+        ]
+    },
+    {
+        "id": "8156ebcf8adb5929",
+        "type": "inject",
+        "z": "9e410adfd4e2d55d",
+        "name": "Process Variable(PV)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "2.8",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 1520,
+        "y": 660,
+        "wires": [
+            [
+                "8781289e870937fb"
+            ]
+        ]
+    },
+    {
+        "id": "48aa3dee2b6ee902",
+        "type": "PID",
+        "z": "2f387a5731899d75",
+        "name": "PID",
+        "setpoint": "13.8",
+        "pb": 1,
+        "ti": 9999,
+        "td": 0,
+        "integral_default": 0.5,
+        "smooth_factor": 3,
+        "max_interval": 600,
+        "enable": 1,
+        "disabled_op": 0,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "7be047b3c14f7151"
+            ]
+        ]
+    },
+    {
+        "id": "82c52c54feb0907b",
+        "type": "PIDLoop",
+        "z": "2f387a5731899d75",
+        "Kp": 1,
+        "Ki": 1,
+        "Kd": 1,
+        "recalcTime": 5,
+        "setPointTopic": "battery/voltage//sp/1",
+        "fireTopic": "fire/1",
+        "fixedTopic": "fixed/1",
+        "fixedValue": 0,
+        "deadBand": 1,
+        "x": 520,
+        "y": 160,
+        "wires": [
+            [
+                "f0854daff7ac4367"
+            ],
+            [
+                "035c19fdbe1d0c8e"
+            ]
+        ]
+    },
+    {
+        "id": "22924a942fd7af32",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "2.5",
+        "maximum": "4.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "563f596a66f05ea7",
+                "b96ae9ada222e4bc",
+                "48aa3dee2b6ee902",
+                "82c52c54feb0907b"
+            ]
+        ]
+    },
+    {
+        "id": "563f596a66f05ea7",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1f48990d294c088e",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "22924a942fd7af32"
+            ]
+        ]
+    },
+    {
+        "id": "b96ae9ada222e4bc",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "battery 1",
+        "group": "9259485d57bd7554",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "BX.1",
+        "label": "voltage",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ee8e7ba97cfe58bc",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 820,
+        "wires": [
+            [
+                "a702a1d6420d1978",
+                "e32e2fd02b99f65f"
+            ]
+        ]
+    },
+    {
+        "id": "a702a1d6420d1978",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "7ceecdb72fe8c648",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 140,
+        "y": 820,
+        "wires": [
+            [
+                "ee8e7ba97cfe58bc"
+            ]
+        ]
+    },
+    {
+        "id": "e32e2fd02b99f65f",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "9259485d57bd7554",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 840,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "2a726998b2567f87",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 900,
+        "wires": [
+            [
+                "0288049b2467c9cf",
+                "d597dcef212c1d0c"
+            ]
+        ]
+    },
+    {
+        "id": "0288049b2467c9cf",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "4fca63eb7c31540d",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 140,
+        "y": 900,
+        "wires": [
+            [
+                "2a726998b2567f87"
+            ]
+        ]
+    },
+    {
+        "id": "d597dcef212c1d0c",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "9259485d57bd7554",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 840,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7be047b3c14f7151",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f0854daff7ac4367",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "035c19fdbe1d0c8e",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bb68b3f9323d6dc6",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "battery/voltage//sp/1",
+        "payload": "13.8",
+        "payloadType": "num",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "82c52c54feb0907b",
+                "48aa3dee2b6ee902"
+            ]
+        ]
+    },
+    {
+        "id": "ad988aeed2bb3c98",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fire/1",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 140,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2fee113e56b2eea",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "setpoint",
+                "v": "13.8",
+                "vt": "num"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "battery/voltage//sp/1",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "48aa3dee2b6ee902"
+            ]
+        ]
+    },
+    {
+        "id": "df8fee045ccdf788",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Process Variable(PV)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "2.8",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "48aa3dee2b6ee902"
+            ]
+        ]
+    },
+    {
+        "id": "45d88cd1beac468a",
+        "type": "PID",
+        "z": "2f387a5731899d75",
+        "name": "PID",
+        "setpoint": 21,
+        "pb": 1,
+        "ti": 9999,
+        "td": 0,
+        "integral_default": 0.5,
+        "smooth_factor": 3,
+        "max_interval": 600,
+        "enable": 1,
+        "disabled_op": 0,
+        "x": 550,
+        "y": 1020,
+        "wires": [
+            [
+                "2f5a47c8ace72d3a"
+            ]
+        ]
+    },
+    {
+        "id": "c832d5be9c66dfd6",
+        "type": "PIDLoop",
+        "z": "2f387a5731899d75",
+        "Kp": 1,
+        "Ki": 1,
+        "Kd": 1,
+        "recalcTime": 5,
+        "setPointTopic": "thermostat/setpoint/sp/1",
+        "fireTopic": "fire/1",
+        "fixedTopic": "fixed/1",
+        "fixedValue": 0,
+        "deadBand": 1,
+        "x": 560,
+        "y": 1140,
+        "wires": [
+            [
+                "3f326924497dafac"
+            ],
+            [
+                "6cfc3e6c2d09001c"
+            ]
+        ]
+    },
+    {
+        "id": "cc5ee6dbbc68c168",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "2.5",
+        "maximum": "4.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 1200,
+        "wires": [
+            [
+                "34dcab8a2ee3f538",
+                "c5e397bdbba02dc5",
+                "45d88cd1beac468a",
+                "c832d5be9c66dfd6"
+            ]
+        ]
+    },
+    {
+        "id": "34dcab8a2ee3f538",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "8bfe492aa10df361",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 140,
+        "y": 1200,
+        "wires": [
+            [
+                "cc5ee6dbbc68c168"
+            ]
+        ]
+    },
+    {
+        "id": "c5e397bdbba02dc5",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 840,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "068002c2979017b6",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 1280,
+        "wires": [
+            [
+                "bced36ad92396cca",
+                "04e86af3a3c9bafd"
+            ]
+        ]
+    },
+    {
+        "id": "bced36ad92396cca",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "8d6bcf25e882a3c9",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 140,
+        "y": 1280,
+        "wires": [
+            [
+                "068002c2979017b6"
+            ]
+        ]
+    },
+    {
+        "id": "04e86af3a3c9bafd",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 840,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "06a2a1f1356ce61c",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 310,
+        "y": 1360,
+        "wires": [
+            [
+                "4e44a3acf017d0a4",
+                "fb1dbf277320c0f7"
+            ]
+        ]
+    },
+    {
+        "id": "4e44a3acf017d0a4",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "f9daed4bbd8d0e5d",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 140,
+        "y": 1360,
+        "wires": [
+            [
+                "06a2a1f1356ce61c"
+            ]
+        ]
+    },
+    {
+        "id": "fb1dbf277320c0f7",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "7732812bd9569c0b",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 840,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "2f5a47c8ace72d3a",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "3f326924497dafac",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "6cfc3e6c2d09001c",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4f285ea97f640786",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "thermostat/setpoint/sp/1",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 180,
+        "y": 1120,
+        "wires": [
+            [
+                "c832d5be9c66dfd6"
+            ]
+        ]
+    },
+    {
+        "id": "23678fd88f13e8a1",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fire/1",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 180,
+        "y": 1080,
+        "wires": [
+            [
+                "c832d5be9c66dfd6"
+            ]
+        ]
+    },
+    {
+        "id": "730c92e51c5fc548",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "setpoint",
+                "v": "2.8",
+                "vt": "num"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "setpoint/1",
+        "x": 160,
+        "y": 980,
+        "wires": [
+            [
+                "45d88cd1beac468a"
+            ]
+        ]
+    },
+    {
+        "id": "7ef258cc09058e78",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Process Variable(PV)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "2.8",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 180,
+        "y": 1020,
+        "wires": [
+            [
+                "45d88cd1beac468a"
+            ]
+        ]
+    },
+    {
+        "id": "548707db57df1ce3",
+        "type": "PID",
+        "z": "2f387a5731899d75",
+        "name": "PID",
+        "setpoint": 21,
+        "pb": 1,
+        "ti": 9999,
+        "td": 0,
+        "integral_default": 0.5,
+        "smooth_factor": 3,
+        "max_interval": 600,
+        "enable": 1,
+        "disabled_op": 0,
+        "x": 1470,
+        "y": 180,
+        "wires": [
+            [
+                "2d44e145e5551664"
+            ]
+        ]
+    },
+    {
+        "id": "3c3ea96e620c2ae5",
+        "type": "PIDLoop",
+        "z": "2f387a5731899d75",
+        "Kp": 1,
+        "Ki": 1,
+        "Kd": 1,
+        "recalcTime": 5,
+        "setPointTopic": "thermostat/setpoint/sp/1",
+        "fireTopic": "fire/1",
+        "fixedTopic": "fixed/1",
+        "fixedValue": 0,
+        "deadBand": 1,
+        "x": 1480,
+        "y": 300,
+        "wires": [
+            [
+                "58c3315a7b835bdc"
+            ],
+            [
+                "b8ff25d0624f2ecc"
+            ]
+        ]
+    },
+    {
+        "id": "18340ee11c271431",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "2.5",
+        "maximum": "4.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1230,
+        "y": 360,
+        "wires": [
+            [
+                "f08a9ecfd61f61f4",
+                "a899572c8e398e98",
+                "548707db57df1ce3",
+                "3c3ea96e620c2ae5"
+            ]
+        ]
+    },
+    {
+        "id": "f08a9ecfd61f61f4",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bffb65125df17603",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            [
+                "18340ee11c271431"
+            ]
+        ]
+    },
+    {
+        "id": "a899572c8e398e98",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "9259485d57bd7554",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1760,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cf25228f95902828",
+        "type": "Number",
+        "z": "2f387a5731899d75",
+        "name": "Random Number",
+        "minimum": "1.0",
+        "maximum": "10.0",
+        "roundTo": "2",
+        "Floor": false,
+        "x": 1230,
+        "y": 440,
+        "wires": [
+            [
+                "dae2b8e6df21eebf",
+                "f3f0f27bdae99a6e"
+            ]
+        ]
+    },
+    {
+        "id": "dae2b8e6df21eebf",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e0bbe0d7f4935317",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1.2",
+        "payloadType": "num",
+        "x": 1060,
+        "y": 440,
+        "wires": [
+            [
+                "cf25228f95902828"
+            ]
+        ]
+    },
+    {
+        "id": "f3f0f27bdae99a6e",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "ch_kW_2",
+        "group": "9259485d57bd7554",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1760,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "34f233df1ff511cd",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "7e0fb453413665fe",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12",
+        "payloadType": "num",
+        "x": 1290,
+        "y": 620,
+        "wires": [
+            [
+                "642891cf408d3194"
+            ]
+        ]
+    },
+    {
+        "id": "a7d07d460ee44d0a",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "Battery Voltage",
+        "group": "9259485d57bd7554",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "voltage",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "13",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1860,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "2d44e145e5551664",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1770,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "58c3315a7b835bdc",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1750,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b8ff25d0624f2ecc",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1750,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4a9405279c8d0af4",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "thermostat/setpoint/sp/1",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 1100,
+        "y": 280,
+        "wires": [
+            [
+                "3c3ea96e620c2ae5"
+            ]
+        ]
+    },
+    {
+        "id": "389e0ba205f1d996",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "fire/1",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 1100,
+        "y": 240,
+        "wires": [
+            [
+                "3c3ea96e620c2ae5"
+            ]
+        ]
+    },
+    {
+        "id": "0d5bad0f78c0cddb",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "setpoint",
+                "v": "2.8",
+                "vt": "num"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "setpoint/1",
+        "x": 1080,
+        "y": 140,
+        "wires": [
+            [
+                "548707db57df1ce3"
+            ]
+        ]
+    },
+    {
+        "id": "092dc283eae5d298",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Process Variable(PV)",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "2.8",
+        "payload": "2.8",
+        "payloadType": "num",
+        "x": 1100,
+        "y": 180,
+        "wires": [
+            [
+                "548707db57df1ce3"
+            ]
+        ]
+    },
+    {
+        "id": "02fb3866cbcd6cb2",
+        "type": "comment",
+        "z": "2f387a5731899d75",
+        "name": "Working PID simulation",
+        "info": "Working PID simulation",
+        "x": 1320,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "642891cf408d3194",
+        "type": "random",
+        "z": "2f387a5731899d75",
+        "name": "RandomInput",
+        "low": "10.5",
+        "high": "14.5",
+        "inte": "false",
+        "property": "payload",
+        "x": 1520,
+        "y": 620,
+        "wires": [
+            [
+                "34f233df1ff511cd",
+                "a4a66225fce6aef3",
+                "e3400c7811921475"
+            ]
+        ]
+    },
+    {
+        "id": "a4a66225fce6aef3",
+        "type": "PIDLoop",
+        "z": "2f387a5731899d75",
+        "Kp": 1,
+        "Ki": 1,
+        "Kd": 1,
+        "recalcTime": 5,
+        "setPointTopic": "battery/voltage//sp/1",
+        "fireTopic": "fire/1",
+        "fixedTopic": "fixed/1",
+        "fixedValue": 0,
+        "deadBand": 1,
+        "x": 1500,
+        "y": 680,
+        "wires": [
+            [
+                "caa89b4112be64c2",
+                "642891cf408d3194",
+                "cbd57ea7a7ecef34"
+            ],
+            [
+                "696044a79a29047a",
+                "5d539ddba31c5c26"
+            ]
+        ]
+    },
+    {
+        "id": "3f0e9d20f67c22c0",
+        "type": "inject",
+        "z": "2f387a5731899d75",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "battery/voltage//sp/1",
+        "payload": "13.8",
+        "payloadType": "num",
+        "x": 1320,
+        "y": 660,
+        "wires": [
+            [
+                "a4a66225fce6aef3"
+            ]
+        ]
+    },
+    {
+        "id": "caa89b4112be64c2",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "696044a79a29047a",
+        "type": "debug",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "cbd57ea7a7ecef34",
+        "type": "ui_chart",
+        "z": "2f387a5731899d75",
+        "name": "LoopOutputTrend",
+        "group": "9259485d57bd7554",
+        "order": 7,
+        "width": "6",
+        "height": "7",
+        "label": "Loop Output ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1730,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3400c7811921475",
+        "type": "rbe",
+        "z": "2f387a5731899d75",
+        "name": "",
+        "func": "deadbandEq",
+        "gap": "5%",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1690,
+        "y": 660,
+        "wires": [
+            [
+                "a7d07d460ee44d0a"
+            ]
+        ]
+    },
+    {
+        "id": "5d539ddba31c5c26",
+        "type": "ui_gauge",
+        "z": "2f387a5731899d75",
+        "name": "LoopOutput",
+        "group": "9259485d57bd7554",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "variable",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "13",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1710,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "39df5f0228d6fae8",
+        "type": "ui_gauge",
+        "z": "c6bf045460c61cd1",
+        "name": "watch_battery",
+        "group": "ead9bb7ff7cde8c1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1120,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "607ecb73f895c8cd",
+        "type": "ui_level",
+        "z": "c6bf045460c61cd1",
+        "group": "ead9bb7ff7cde8c1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": "10",
+        "max": "15",
+        "segWarn": "",
+        "segHigh": "",
+        "unit": "",
+        "layout": "sh",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1120,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5f72e650a9113b59",
+        "type": "ui_context_menu",
+        "z": "c6bf045460c61cd1",
+        "group": "ead9bb7ff7cde8c1",
+        "order": 2,
+        "width": 0,
+        "height": -1,
+        "fontSize": 16,
+        "inputPositionXField": "50",
+        "inputPositionXType": "num",
+        "inputPositionYField": "50",
+        "inputPositionYType": "num",
+        "outputField": "payload",
+        "inputMenuField": "menu",
+        "inputMenuType": "fixed",
+        "menuItems": [
+            {
+                "id": "1",
+                "icon": "",
+                "label": "hello",
+                "topic": "",
+                "payload": "",
+                "payloadType": "str",
+                "visible": true,
+                "enabled": true
+            },
+            {
+                "id": "2",
+                "icon": "",
+                "label": "good",
+                "topic": "",
+                "payload": "",
+                "payloadType": "str",
+                "visible": true,
+                "enabled": true
+            }
+        ],
+        "colors": "native",
+        "textColor": "#000000",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#626262",
+        "intervalLength": 0,
+        "intervalUnit": "secs",
+        "startTimerAtOpen": false,
+        "startTimerAtLeave": true,
+        "stopTimerAtEnter": true,
+        "name": "sdaf",
+        "x": 1140,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f796814bc5e58956",
+        "type": "ui_level",
+        "z": "c6bf045460c61cd1",
+        "group": "ead9bb7ff7cde8c1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": 100,
+        "segWarn": "",
+        "segHigh": "",
+        "unit": "",
+        "layout": "sh",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1130,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "c3e956b60bdd29de",
+        "type": "ui_level",
+        "z": "c6bf045460c61cd1",
+        "group": "ead9bb7ff7cde8c1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "colorHi": "#e60000",
+        "colorWarn": "#ff9900",
+        "colorNormal": "#00b33c",
+        "colorOff": "#595959",
+        "min": 0,
+        "max": "15",
+        "segWarn": "",
+        "segHigh": "",
+        "unit": "",
+        "layout": "sh",
+        "channelA": "",
+        "channelB": "",
+        "decimals": 0,
+        "animations": "soft",
+        "shape": 2,
+        "colorschema": "fixed",
+        "textoptions": "default",
+        "colorText": "#eeeeee",
+        "fontLabel": "",
+        "fontValue": "",
+        "fontSmall": "",
+        "colorFromTheme": true,
+        "textAnimations": false,
+        "hideValue": false,
+        "tickmode": "off",
+        "peakmode": false,
+        "property": "payload",
+        "peaktime": 3000,
+        "x": 1130,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "6c1f500e245ba790",
+        "type": "debug",
+        "z": "c6bf045460c61cd1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "30251e227e346f11",
+        "type": "inject",
+        "z": "c6bf045460c61cd1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12",
+        "payloadType": "num",
+        "x": 390,
+        "y": 680,
+        "wires": [
+            [
+                "a16ba52f8b8de281"
+            ]
+        ]
+    },
+    {
+        "id": "a5ee556e3593f9b7",
+        "type": "ui_gauge",
+        "z": "c6bf045460c61cd1",
+        "name": "Battery Voltage",
+        "group": "9259485d57bd7554",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "voltage",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "15",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1040,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a54c369648aeb06b",
+        "type": "comment",
+        "z": "c6bf045460c61cd1",
+        "name": "Working PID simulation",
+        "info": "Working PID simulation",
+        "x": 420,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "a16ba52f8b8de281",
+        "type": "random",
+        "z": "c6bf045460c61cd1",
+        "name": "RandomInput",
+        "low": "10.5",
+        "high": "14.5",
+        "inte": "false",
+        "property": "payload",
+        "x": 620,
+        "y": 680,
+        "wires": [
+            [
+                "6c1f500e245ba790",
+                "63845fca86b878a2",
+                "381d56c9d9cba061",
+                "607ecb73f895c8cd",
+                "39df5f0228d6fae8"
+            ]
+        ]
+    },
+    {
+        "id": "63845fca86b878a2",
+        "type": "PIDLoop",
+        "z": "c6bf045460c61cd1",
+        "Kp": 1,
+        "Ki": 1,
+        "Kd": 1,
+        "recalcTime": 5,
+        "setPointTopic": "battery/voltage//sp/1",
+        "fireTopic": "fire/1",
+        "fixedTopic": "fixed/1",
+        "fixedValue": 0,
+        "deadBand": 1,
+        "x": 600,
+        "y": 740,
+        "wires": [
+            [
+                "9a56048e11953802",
+                "a16ba52f8b8de281",
+                "141bc62f33c75dd6",
+                "f796814bc5e58956"
+            ],
+            [
+                "13978a5947a000f1",
+                "ba10964a9ff8f58c"
+            ]
+        ]
+    },
+    {
+        "id": "f41959eb3d922ee0",
+        "type": "inject",
+        "z": "c6bf045460c61cd1",
+        "name": "Setpoint (SP)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "battery/voltage//sp/1",
+        "payload": "13.8",
+        "payloadType": "num",
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "63845fca86b878a2"
+            ]
+        ]
+    },
+    {
+        "id": "9a56048e11953802",
+        "type": "debug",
+        "z": "c6bf045460c61cd1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "13978a5947a000f1",
+        "type": "debug",
+        "z": "c6bf045460c61cd1",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "141bc62f33c75dd6",
+        "type": "ui_chart",
+        "z": "c6bf045460c61cd1",
+        "name": "LoopOutputTrend",
+        "group": "9259485d57bd7554",
+        "order": 7,
+        "width": "6",
+        "height": "7",
+        "label": "Loop Output ",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 830,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "381d56c9d9cba061",
+        "type": "rbe",
+        "z": "c6bf045460c61cd1",
+        "name": "",
+        "func": "deadbandEq",
+        "gap": "5%",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 790,
+        "y": 720,
+        "wires": [
+            [
+                "a5ee556e3593f9b7",
+                "c3e956b60bdd29de"
+            ]
+        ]
+    },
+    {
+        "id": "ba10964a9ff8f58c",
+        "type": "ui_gauge",
+        "z": "c6bf045460c61cd1",
+        "name": "LoopOutput",
+        "group": "9259485d57bd7554",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "variable",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "13",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 810,
+        "y": 880,
         "wires": []
     }
 ]
